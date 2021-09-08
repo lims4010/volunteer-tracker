@@ -13,7 +13,7 @@ const getSundays = () => {
   }
 
   // Get all the other Mondays in the month
-  while (d.getMonth() < endMonth) {
+  while (d.getMonth() !== endMonth) {
     var pushDate = new Date(d.getTime());
     sundays.push(pushDate.getMonth() + 1 + "/" + pushDate.getDate());
     d.setDate(d.getDate() + 7);
